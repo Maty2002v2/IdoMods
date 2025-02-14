@@ -54,9 +54,9 @@
     text-transform: uppercase;
 }
 
-.nav-links a:hover {
-    background: #555;
-    border-radius: 5px;
+
+.nav-links a.bold {
+    font-weight: 700;
 }
 
 .nav-links a.active {
