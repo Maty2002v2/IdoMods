@@ -1,0 +1,16 @@
+.green-button, .red-button {
+    padding: 10px 40px;
+    color: #FFF;
+    font-weight: 700;
+    font-size: 1.25rem;
+    border: none;
+    cursor: pointer;
+}
+
+.green-button {
+    background-color: #30AB4C;
+}
+
+.red-button {
+    background-color: #AD4844;
+}
