@@ -106,4 +106,9 @@
     .list {
         align-items: center;
     }
+
+    .stand-out__image {
+        width: 100%;
+        height: auto;
+    }
 }
