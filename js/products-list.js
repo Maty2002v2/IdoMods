@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             const div = document.createElement("div");
             div.classList.add("product");
             div.innerHTML = `<p>ID: ${product.id}</p>`;
+            div.addEventListener("click", () => window.showPopup(product.text, product.id));
             productContainer.appendChild(div);
         });
     }
