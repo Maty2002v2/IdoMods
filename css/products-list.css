@@ -1,0 +1,35 @@
+#products {
+    padding-top: 130px;
+}
+
+#products .custom-select {
+    margin: 0px auto;
+}
+
+#products-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 50px;
+    row-gap: 35px;
+    margin-top: 120px;
+    margin-bottom: 20px;
+}
+
+#products-list .product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 350px;
+    max-height: 371px;
+    aspect-ratio : 1 / 1;
+    background-color: #BEBEBE;
+    color: #000;
+    font-size: 31px;
+    font-weight: 450;
+}
+
+@media (max-width: 1200px) {
+    #products-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

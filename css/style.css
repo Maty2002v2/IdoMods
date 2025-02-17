@@ -65,6 +65,10 @@ section {
     font-size: 1.25rem;
 }
 
+.overflow-hidden {
+    overflow: hidden;
+}
+
 @media (max-width: 1200px) {
     section {
         padding: 0px 23px;

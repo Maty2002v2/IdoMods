@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="./css/composition-section.css">
     <link rel="stylesheet" href="./css/product-works.css">
     <link rel="stylesheet" href="./css/buttons.css">
+    <link rel="stylesheet" href="./css/custom-select.css">
+    <link rel="stylesheet" href="./css/products-list.css">
+    <link rel="stylesheet" href="./css/popup.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -32,6 +35,14 @@
     </header>
 
     <div class="menu-backdrop"></div>
+
+    <div id="popup-backdrop"></div>
+    <div id="popup">
+        <button class="popup__close-button">x</button>
+        <p class="popup__title">ID</p>
+        <p class="popup__item">Nazwa: <span id="popup-item-name"></span></p>
+        <p class="popup__item">Wartość: <span id="popup-item-value"></span></p>
+    </div>
 
     <section id="main-section">
         <div class="product-preview">
@@ -175,8 +186,12 @@
         </div>
     </section>
 
-    <section id="produkts"></section>
+    <section id="products">
+        <div id="products-list"></div>
+    </section>
     
+    <script src="js/api-service.js"></script>
     <script src="js/manu.js"></script>
+    <script src="js/products-list.js"></script>
 </body>
 </html>
