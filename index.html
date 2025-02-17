@@ -187,11 +187,27 @@
     </section>
 
     <section id="products">
+        <div class="custom-select">
+            <label for="product-count">liczba produktów na stronie</label>
+            <div class="select-wrapper">
+                <div class="select-box">20</div>
+                <select id="product-count">
+                    <option value="10">10</option>
+                    <option value="20" selected>20</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                    <option value="100">150</option>
+                    <option value="100">200</option>
+                </select>
+            </div> 
+        </div>
+        
         <div id="products-list"></div>
     </section>
     
     <script src="js/api-service.js"></script>
     <script src="js/manu.js"></script>
     <script src="js/products-list.js"></script>
+    <script src="js/custom-select.js"></script>
 </body>
 </html>

@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const productContainer = document.getElementById("products-list");
 
     const loadMoreProducts = async () => {
-        const pageSize = 20;
+        const pageSize = +document.querySelector('select#product-count').value ?? 20;
 
         const products = await window.fetchProducts(page, pageSize);
         if (products.data.length > 0) {
