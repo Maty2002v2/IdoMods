@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/menu.css">
     <link rel="stylesheet" href="./css/main-section.css">
+    <link rel="stylesheet" href="./css/stand-out-section.css">
     <link rel="stylesheet" href="./css/buttons.css">
 </head>
 <body>
@@ -30,19 +31,54 @@
 
     <div class="menu-backdrop"></div>
 
-    <section class="main-section">
+    <section id="main-section">
         <div class="product-preview">
-            <img src="./assets/two-bottles.png" alt="two bottles of the preparation">
+            <img src="./assets/two-bottles.png" alt="Dwie butelki preparatu">
         </div>
         <div>
-            <h1><img class="logo" src="./assets/logo.png" alt="arthrohard logo"></h1>
+            <h1><img class="logo" src="./assets/logo.png" alt="Logo arthrohard"></h1>
             <h2 class="title gradient-text">Lab-V Arthrohard Preparat <br>na wsparcie stawów dla psa i kota</h2>
             <p class="subtitle">Arthrohard to dobrze przyswajalny suplement diety w formie syropu, <br>stworzony z myślą o zdrowiu stawów Twojego psa lub kota.</p>
             <button class="green-button">Kup teraz</button>
         </div>
     </section>
 
-    <section id="stand-out"></section>
+    <section id="stand-out">
+        <h2 class="gradient-text section-title underline-title stand-out__title">Co wyróżnia nasz preparat</h2>
+
+        <div class="stand-out__boxes-wrapper">
+            <article class="stand-out__box">
+                <h3 class="stand-out__box-title underline-title">Innowacyjny dodatek - <br>Czarciego Pazura</h3>
+                <p class="stand-out__content">Zapewnia dodatkowe wsparcie w zwalczaniu stanów bólowych i zapalnych. Skoncentrowane składniki aktywne, opracowane we współpracy z lekarzami weterynarii, przynoszą szybkie i zauważalne efekty, szczególnie korzystne dla zwierząt z poważnymi problemami stawowymi.</p>
+                <div class="stand-out__image-wrapper">
+                    <img class="stand-out__image" src="./assets/stand-out/stand-out-1.png" alt="Kwiatek">
+                </div>
+            </article>
+    
+            <article class="stand-out__box">
+                <h3 class="stand-out__box-title underline-title">Wygoda - <br>dwa sposoby podawania</h3>
+                <ol class="stand-out__content list">
+                    <li class="list__element">
+                        <span class="list__element-number">1</span> Bezpośrednio do pyszczka
+                    </li>
+                    <li class="list__element">
+                        <span class="list__element-number">2</span>  Zmieszany z karmą
+                    </li>
+                </ol>
+                <div class="stand-out__image-wrapper">
+                    <img class="stand-out__image" src="./assets/stand-out/stand-out-2.png" alt="Dwa psy, jeden je z ręki drugi z miski">
+                </div>
+            </article>
+    
+            <article class="stand-out__box">
+                <h3 class="stand-out__box-title underline-title">Skuteczność - <br>skoncentrowana dawka</h3>
+                <p class="stand-out__content">Tylko jedna porcja dziennie. To nie tylko wygoda, ale również gwarancja, że Twoje zwierzę otrzymuje wszystko, czego potrzebuje, aby cieszyć się zdrowiem i aktywnością na długo. Skorzystaj z zalet Arthrohard i zobacz różnicę w komforcie życia swojego zwierzęcia.</p>
+                <div class="stand-out__image-wrapper">
+                    <img class="stand-out__image" src="./assets/stand-out/stand-out-3.png" alt="Strzykawka z igłą">
+                </div>
+            </article>
+        </div>
+    </section>
 
     <section id="composition"></section>
     <section id="produkts"></section>
