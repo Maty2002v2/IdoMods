@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/menu.css">
     <link rel="stylesheet" href="./css/main-section.css">
     <link rel="stylesheet" href="./css/stand-out-section.css">
+    <link rel="stylesheet" href="./css/composition-section.css">
     <link rel="stylesheet" href="./css/buttons.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <header class="header">
@@ -80,7 +81,70 @@
         </div>
     </section>
 
-    <section id="composition"></section>
+    <section id="composition">
+        <h2 class="gradient-text section-title underline-title composition__title">Skład w 5 ml</h2>
+
+        <h3 class="components__title">Co dają poszczególne składniki:</h3>
+
+        <div class="components-grid">
+            <div class="component" data-order="1">
+                <img class="component__image" src="./assets/product-composition-icons/device_hub.png" alt="Mikroskop">
+                <h4 class="component__name">Siarczan glukozaminy</h4>
+                <p class="component__quantity">650 mg</p>
+                <p class="component__desc">Glukozamina jest naturalnym składnikiem chrząstki. Dodatek glukozaminy przyczynia się do zwiększenia produkcji glikozaminoglikanów (m.in. siarczanu keratanu, heparanu, kwasu hialuronowego), które pomagają w odbudowie chrząstki, co jest szczególnie korzystne dla zwierząt ze zmianami zwyrodnieniowymi stawów.</p>
+            </div>
+
+            <div class="component" data-order="2">
+                <img class="component__image" src="./assets/product-composition-icons/grass.png" alt="Krzaczek rośliny">
+                <h4 class="component__name">Czarci pazur</h4>
+                <p class="component__quantity">250 mg</p>
+                <p class="component__desc">Czarci pazur jest rośliną, która ma właściwości przeciwzapalne i przeciwbólowe. Może to pomóc zwierzętom, które doświadczają bólu i stanu zapalnego związanego z problemami ze stawami.</p>
+            </div>
+
+            <div class="component" data-order="3">
+                <img class="component__image" src="./assets/product-composition-icons/biotech.png" alt="Mikroskop">
+                <h4 class="component__name">Siarczan chondroityny</h4>
+                <p class="component__quantity">300 mg</p>
+                <p class="component__desc">Chondroityna, podobnie jak glukozamina, jest składnikiem chrząstki. Chondroityna pomaga zwalczać enzymy, które niszczą chrząstkę, a także pomaga chrząstce zatrzymać wodę, co jest ważne dla jej sprężystości i absorpcji wstrząsów.</p>
+            </div>
+
+            <div class="center">
+                <img class="center__image" src="./assets/bottle.png" alt="Butelka preparatu">
+                <button class="red-button">Kup teraz</button>
+            </div>
+
+            <div class="component" data-order="4">
+                <img class="component__image" src="./assets/product-composition-icons/vitamin.png" alt="C++">
+                <h4 class="component__name">Witamina C</h4>
+                <p class="component__quantity">50 mg</p>
+                <p class="component__desc">Witamina C jest potężnym przeciwutleniaczem, który może pomóc w ochronie stawów poprzez neutralizację wolnych rodników, które mogą uszkadzać chrząstkę. Ponadto, witamina C odgrywa ważną rolę w produkcji kolagenu, kluczowego składnika chrząstki.</p>
+            </div>
+
+            <div class="component" data-order="5">
+                <img class="component__image" src="./assets/product-composition-icons/science.png" alt="Probówka">
+                <h4 class="component__name">Kwas hialuronowy</h4>
+                <p class="component__quantity">50 mg</p>
+                <p class="component__desc">Kwas hialuronowy jest kluczowym składnikiem płynu stawowego, który działa jak smar i amortyzator dla stawów. Suplementacja kwasem hialuronowym może pomóc w utrzymaniu prawidłowej objętości i konsystencji płynu stawowego.</p>
+            </div>
+
+            <div class="component" data-order="6">
+                <img class="component__image" src="./assets/product-composition-icons/device_hub.png" alt="połączenie chemiczne">
+                <h4 class="component__name">MSM</h4>
+                <p class="component__quantity">250 mg</p>
+                <p class="component__desc">Metylosulfonylometan, czyli MSM, to naturalny związek siarki, który pomaga w utrzymaniu zdrowych stawów poprzez zmniejszenie stanu zapalnego i bólu. MSM może również pomagać w produkcji kolagenu, co przyczynia się do zdrowia chrząstki stawowej.</p>
+            </div>
+
+            <div class="component" data-order="7">
+                <img class="component__image" src="./assets/product-composition-icons/opacity.png" alt="połączenie chemiczne">
+                <h4 class="component__name">Syrop glukozowo - fruktozowy</h4>
+                <p class="component__quantity">250 mg</p>
+            </div>
+        </div>
+        
+        <div class="dog">
+            <img class="dog__image" src="./assets/dog.png" alt="Buldog patrzący do góry na skład butelki">
+        </div>
+    </section>
     <section id="produkts"></section>
     
     <script src="js/manu.js"></script>
