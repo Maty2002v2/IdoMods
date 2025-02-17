@@ -8,8 +8,45 @@ section {
     -webkit-text-fill-color: transparent;
 }
 
+.section-title {
+    font-size: 3rem;
+    font-weight: 450;
+    line-height: 61px;
+}
+
+
+.underline-title {
+    position: relative;
+    padding-bottom: 20px;
+
+}
+
+.underline-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 126px;
+    height: 1px;
+    background-color: #111;
+    transform: translate(-50%, -50%);
+
+}
+
 @media (max-width: 1200px) {
     section {
         padding: 0px 23px;
+    }
+
+    .underline-title::after {
+        width: 140px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.25rem;
+        font-weight: 450;
+        line-height: 26px;
     }
 }
