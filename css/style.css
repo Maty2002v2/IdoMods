@@ -1,3 +1,7 @@
+body {
+    background-color: #F1F1F1;
+}
+
 section {
     padding: 0px 160px;
 }
@@ -31,6 +35,34 @@ section {
     background-color: #111;
     transform: translate(-50%, -50%);
 
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.list__element {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+
+}
+
+.list__element-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    box-shadow: 0px 1px 9px 0px #00000040;
+    background-color: #FFF;
+    color: #000;
+    font-weight: 700;
+    font-size: 1.25rem;
 }
 
 @media (max-width: 1200px) {
