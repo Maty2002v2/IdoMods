@@ -3,10 +3,10 @@ const BASE_URL = "https://brandstestowy.smallhost.pl/api/random";
 window.productsLoading = false;
 
 /**
- * Pobiera dane z API.
- * @param {number} pageNumber - Numer strony.
- * @param {number} pageSize - Liczba elementów na stronę.
- * @returns {Promise<Array>} - Tablica produktów.
+ * Gets data from API
+ * @param {number} pageNumber - Page number.
+ * @param {number} pageSize - Number of items per page.
+ * @returns {Promise<Array>} - Product array.
  */
 const fetchProducts = async(pageNumber = 1, pageSize = 20) => {
     try {
