@@ -20,7 +20,7 @@
     background: #fff;
     padding: 15px 20px;
     box-shadow: 0px 4px 4px 0px #00000040;
-    z-index: 2;
+    z-index: 3;
 }
 
 .navbar {
@@ -102,7 +102,8 @@
 
 @media (max-width: 768px) {
     .header {
-        position: static;
+        position: sticky;
+        top: 0px;
     }
 
     .hamburger {
@@ -131,6 +132,7 @@
 
     .nav-links a.active {
         color: #FFFFFF;
+        font-weight: 700;
         border-color: #FFFFFF;
     }
 
