@@ -1,3 +1,14 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Futura PT Book';
+}
+
 body {
     background-color: #F1F1F1;
 }
@@ -7,7 +18,7 @@ section {
 }
 
 .gradient-text {
-    background: -webkit-linear-gradient(90.01deg, #111111 -8.85%, #B1B1B1 116.12%);
+    background: -webkit-linear-gradient(10.01deg, #111111 -8.85%, #B1B1B1 116.12%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

@@ -100,14 +100,13 @@
 }
 
 .dog {
-    width: 100%;
-    text-align: center;
-}
-
-.dog__image {
-    max-width: 945px;
-    width: 100%;
-    height: auto;
+    margin: 0px auto;
+    width: 945px;
+    height: 500px;
+    background-image: url('../assets/dog.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .composition-vector {
@@ -234,5 +233,11 @@
         top: -30px;
         right: -35px;
         transform: rotate(-45deg)
+    }
+
+    .dog {
+        width: 90vw;
+        height: 223px;
+        background-size: contain;
     }
 }
