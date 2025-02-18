@@ -1,8 +1,10 @@
 #product-works {
+    position: relative;
     display: none;
     margin-bottom: 17px;
     padding-bottom: 29px;
     background-color: #FFF;
+    overflow: hidden;
 }
 
 .product-works__title {
@@ -15,8 +17,32 @@
     gap: 30px;
 }
 
+.product-works-vector {
+    position: absolute;
+    display: none;
+    width: 54px;
+    height: 137px;
+}
+
+
 @media (max-width: 768px) {
     #product-works {
         display: block;
     } 
+
+    .product-works-vector {
+        display: block;
+    }
+    
+    .product-works-vector-1 {
+        top: 16px;
+        left: -25px;
+        transform: rotate(50deg);
+    }
+    
+    .product-works-vector-2 {
+        top: 20px;
+        right: -15px;
+        transform: rotate(-45deg)
+    }
 }

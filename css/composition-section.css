@@ -1,5 +1,7 @@
 #composition {
+    position: relative;
     background-color: #FFF;
+    overflow: hidden;
 }
 
 .composition__title {
@@ -46,6 +48,7 @@
 }
 
 .component {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -105,6 +108,13 @@
     max-width: 945px;
     width: 100%;
     height: auto;
+}
+
+.composition-vector {
+    position: absolute;
+    display: none;
+    width: 54px;
+    height: 137px;
 }
 
 @media (max-width: 1500px) {
@@ -196,5 +206,33 @@
 
     .center .red-button {
         display: none;
+    }
+
+    .composition-vector {
+        display: block;
+    }
+    
+    .composition-vector-1 {
+        top: 16px;
+        left: -25px;
+        transform: rotate(50deg);
+    }
+    
+    .composition-vector-2 {
+        top: 20px;
+        right: -15px;
+        transform: rotate(-45deg)
+    }
+
+    .composition-vector-3 {
+        top: -26px;
+        left: -48px;
+        transform: rotate(50deg);
+    }
+    
+    .composition-vector-4 {
+        top: -30px;
+        right: -35px;
+        transform: rotate(-45deg)
     }
 }

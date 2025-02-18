@@ -1,4 +1,5 @@
 #main-section {
+    position: relative;
     display: flex;
     gap: 111px;
     padding-bottom: 153px;
@@ -36,6 +37,38 @@
     color: #111111;
     font-size: 1.25rem;
     line-height: 25px;
+}
+
+.main-vector,
+.main-mobile-vector {
+    position: absolute;
+}
+
+.main-mobile-vector {
+    display: none;
+    width: 54px;
+    height: 137px;
+}
+
+.main-vector-1 {
+    top: 721px;
+    right: 0px;
+}
+
+.main-vector-2 {
+    top: 828px;
+    left: 0px;
+}
+
+.main-vector-3 {
+    top: 530px;
+    right: 0px;
+}
+
+@media (max-width: 1500px) {
+    .main-vector {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
@@ -77,5 +110,21 @@
 
     #main-section .green-button {
         display: none;
+    }
+
+    .main-mobile-vector {
+        display: block;
+    }
+
+    .main-mobile-vector-4 {
+        top: 601px;
+        left: -30px;
+        transform: rotate(45deg);
+    }
+
+    .main-mobile-vector-5 {
+        top: 654px;
+        right: -30px;
+        transform: rotate(45deg);
     }
 }
