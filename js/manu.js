@@ -26,19 +26,26 @@ document.addEventListener("DOMContentLoaded", () => {
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                navLinks.forEach(link => {
-                    link.classList.remove("active");
-                    if (link.getAttribute("href") === `#${entry.target.id}`) {
-                        link.classList.add("active");
-                    }
-                });
+                const id = entry.target.dataset.parentId;
+                navLinks.forEach(link => link.classList.toggle("active", link.getAttribute("href") === `#${id}`));
             }
         });
-    }, {
-        threshold: 0.2
-    });
+    }, {threshold: 0.9});
 
-    sections.forEach(section => observer.observe(section));
+    sections.forEach(section => {
+        const topMarker = document.createElement("div");
+        topMarker.style.position = "absolute";
+        topMarker.style.top = "100px";
+        topMarker.style.width = "50%";
+        topMarker.style.height = "200px";
+
+        topMarker.dataset.parentId = section.id;
+
+        section.style.position = "relative";;
+
+        section.prepend(topMarker);
+        observer.observe(topMarker);
+      });
 
     toggleMobileMenu();
 });
