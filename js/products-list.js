@@ -3,9 +3,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const productContainer = document.getElementById("products-list");
 
     const loadMoreProducts = async () => {
-        const pageSize = +document.querySelector('select#product-count').value ?? 20;
-
-        const products = await window.fetchProducts(page, pageSize);
+        const products = await window.fetchProducts(page, 10);
         if (products.data.length > 0) {
             renderProducts(products.data);
             page++;
@@ -23,7 +21,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     window.addEventListener("scroll", async () => {
-        if (window.innerHeight + window.scrollY >= document.body.offsetHeight && !window.productsLoading) {
+        const productsLimitOnPage = +document.querySelector('select#product-count').value ?? 20;
+        const productsBlocks = document.querySelectorAll('.product');
+
+        if (
+            window.innerHeight + window.scrollY >= document.body.offsetHeight 
+            && !window.productsLoading
+            && productsBlocks.length < productsLimitOnPage
+        ) {
             await loadMoreProducts();
         }
     });
