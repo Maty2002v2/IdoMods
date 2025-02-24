@@ -41,8 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         topMarker.dataset.parentId = section.id;
 
-        section.style.position = "relative";;
-
         section.prepend(topMarker);
         observer.observe(topMarker);
       });
