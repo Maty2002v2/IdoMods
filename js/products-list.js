@@ -1,12 +1,29 @@
+const calculateProductsApiParams = (newPageSize) => {
+    const productsBlocks = document.querySelectorAll('.product');
+
+    if (!productsBlocks.length || productsBlocks.length < newPageSize) 
+        return { pageNumber: 1, pageSize: newPageSize, productsBlocks};
+        
+
+    return { pageNumber: Math.floor(productsBlocks.length / newPageSize) + 1, pageSize: newPageSize, productsBlocks };
+}
+
+const filterRenderProductsDuplicates = (apiData, renderData) => {
+    const renderedProductsIds = [...renderData].map((productBox) => +productBox.dataset.productId);
+    return apiData.filter((product) => !renderedProductsIds.includes(product.id));
+}
+
 document.addEventListener("DOMContentLoaded", async () => {
-    let page = 1;
     const productContainer = document.getElementById("products-list");
 
     const loadMoreProducts = async () => {
-        const products = await window.fetchProducts(page, 10);
+        const selectValue = +document.querySelector('select#product-count').value ?? 20;
+        
+        const { pageNumber, pageSize, productsBlocks } = calculateProductsApiParams(selectValue);
+
+        const products = await window.fetchProducts(pageNumber, pageSize);
         if (products.data.length > 0) {
-            renderProducts(products.data);
-            page++;
+            renderProducts(filterRenderProductsDuplicates(products.data, productsBlocks));
         }
     }
 
@@ -15,19 +32,15 @@ document.addEventListener("DOMContentLoaded", async () => {
             const div = document.createElement("div");
             div.classList.add("product");
             div.innerHTML = `<p>ID: ${product.id}</p>`;
+            div.dataset.productId = product.id;
             div.addEventListener("click", () => window.showPopup(product.text, product.id));
             productContainer.appendChild(div);
         });
     }
 
     window.addEventListener("scroll", async () => {
-        const productsLimitOnPage = +document.querySelector('select#product-count').value ?? 20;
-        const productsBlocks = document.querySelectorAll('.product');
-
         if (
-            window.innerHeight + window.scrollY >= document.body.offsetHeight 
-            && !window.productsLoading
-            && productsBlocks.length < productsLimitOnPage
+            window.innerHeight + window.scrollY >= document.body.offsetHeight && !window.productsLoading
         ) {
             await loadMoreProducts();
         }
